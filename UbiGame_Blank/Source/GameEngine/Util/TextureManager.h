@@ -15,6 +15,8 @@ namespace GameEngine
 			Ball,
 			LeftBall,
 			RightBall,
+			LeftPaddle,
+			RightPaddle,
 			Count,
 		};
 	}	
@@ -22,9 +24,11 @@ namespace GameEngine
 	inline const char* GetPath(eTexture::type texture)
 	{
 		switch (texture) {
-		case eTexture::Ball: return "whiteball.png";
-		case eTexture::LeftBall: return "leftcolourball.png";
-		case eTexture::RightBall: return "rightcolourball.png";
+		case eTexture::Ball: return "neutral_maki.png";
+		case eTexture::LeftBall: return "pink_maki.png";
+		case eTexture::RightBall: return "blue_maki.png";
+		case eTexture::LeftPaddle: return "pink_chopstick.png";
+		case eTexture::RightPaddle: return "blue_chopstick.png";
 		case eTexture::Background:    return "Black.png";
 		
 		}

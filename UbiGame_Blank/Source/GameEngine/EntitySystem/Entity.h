@@ -21,7 +21,7 @@ namespace GameEngine
 		sf::Vector2f GetSize() const { return m_size; }
 		float		 GetRot()  const { return m_rotation; }
 		int flag = -1;
-		int numbofplayer=4;
+		int numbofplayer=2;  //Change value, change in gameboard.h
 		void		 SetPos(sf::Vector2f pos)   { m_pos = pos; }
 		void		 SetSize(sf::Vector2f size) { m_size = size; }
 		void	     SetRotation(float rotation) { m_rotation = rotation; }		

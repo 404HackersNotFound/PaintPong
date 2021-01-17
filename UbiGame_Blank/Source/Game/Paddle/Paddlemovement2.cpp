@@ -42,18 +42,38 @@ void Paddlemovement2::Update()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
 			//top border + paddlesize middle + top border thickness
-		if ((GetEntity()->GetPos().y + wantedVel.y) > (0 + paddlesize / 2) +66)
-		{
-			wantedVel.y -= playerVel * dt;
+		if (numbofplayer == 2) {
+			if ((GetEntity()->GetPos().y + wantedVel.y) > (0 + paddlesize / 2) + 6)
+			{
+				wantedVel.y -= playerVel * dt;
+			}
 		}
+		else
+		{
+			if ((GetEntity()->GetPos().y + wantedVel.y) > (0 + paddlesize / 2) + 66)
+			{
+				wantedVel.y -= playerVel * dt;
+			}
+		}
+		
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 	{
-		if ((GetEntity()->GetPos().y + wantedVel.y) < (GameEngine::GameEngineMain::GetPixelHeight(90.f) - paddlesize / 2) + -66)
-		{
-			wantedVel.y += playerVel * dt;
+		if (numbofplayer == 2) {
+			if ((GetEntity()->GetPos().y + wantedVel.y) < (GameEngine::GameEngineMain::GetPixelHeight(90.f) - paddlesize / 2) + -16)
+			{
+				wantedVel.y += playerVel * dt;
+			}
 		}
+		else
+		{
+			if ((GetEntity()->GetPos().y + wantedVel.y) < (GameEngine::GameEngineMain::GetPixelHeight(90.f) - paddlesize / 2) + -66)
+			{
+				wantedVel.y += playerVel * dt;
+			}
+		}
+		
 	}
 
 	GetEntity()->SetPos(GetEntity()->GetPos() + wantedVel);

@@ -3,12 +3,13 @@
 
 using namespace Game;
 
-ScoreEntity::ScoreEntity(int score)
+ScoreEntity::ScoreEntity(sf::Color color, int score):
+	score{score}
 {
 	// Render
 	m_scoreTextRenderComponent = AddComponent<GameEngine::TextRenderComponent>();
 	m_scoreTextRenderComponent->SetFont("arial.ttf");
-	m_scoreTextRenderComponent->SetColor(sf::Color::Blue);
+	m_scoreTextRenderComponent->SetColor(color);
 	m_scoreTextRenderComponent->SetCharacterSizePixels(GameEngine::GameEngineMain::GetPixelHeight(4.f));
 	m_scoreTextRenderComponent->SetFillColor(sf::Color::Transparent);
 	m_scoreTextRenderComponent->SetZLevel(2);

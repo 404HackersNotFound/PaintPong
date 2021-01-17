@@ -76,7 +76,7 @@ void GameBoard::CreateBall() {
 }
 
 void GameBoard::CreateScoreboard() {
-	scoreboard = new ScoreboardEntity();
+	scoreboard = new ScoreboardEntity(2);
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(scoreboard);
 
 	scoreboard->SetPos(sf::Vector2f(GameEngine::GameEngineMain::GetPixelWidth(50.f), GameEngine::GameEngineMain::GetPixelHeight(95.f)));

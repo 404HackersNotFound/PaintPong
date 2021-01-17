@@ -4,13 +4,13 @@
 
 using namespace Game;
 
-TimerEntity::TimerEntity(int seconds)
+TimerEntity::TimerEntity(sf::Color color, int seconds)
 	: timerSeconds(seconds), secondsRemaining(seconds), startTimeInSeconds(time(NULL))
 {
 	// Render
 	m_timerTextRenderComponent = AddComponent<GameEngine::TextRenderComponent>();
 	m_timerTextRenderComponent->SetFont("arial.ttf");
-	m_timerTextRenderComponent->SetColor(sf::Color::Blue);
+	m_timerTextRenderComponent->SetColor(color);
 	m_timerTextRenderComponent->SetCharacterSizePixels(GameEngine::GameEngineMain::GetPixelHeight(4.f));
 	m_timerTextRenderComponent->SetFillColor(sf::Color::Transparent);
 	m_timerTextRenderComponent->SetZLevel(2);
@@ -47,4 +47,10 @@ void TimerEntity::Update()
 	else {
 		m_timerTextRenderComponent->SetString(std::to_string(0));
 	}
+}
+
+void TimerEntity::ShowWinner(sf::Color color) 
+{
+	m_timerTextRenderComponent->SetString("Winner");
+	m_timerTextRenderComponent->SetColor(color);
 }

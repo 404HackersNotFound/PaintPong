@@ -31,6 +31,9 @@ void GameBoard::Update()
 		if(ball->flag !=-1)
 		Border->UpdatePixel(ball->GetPos().x, ball->GetPos().y, ball->flag-2, scoreboard);
 	}
+	else {
+		scoreboard->ShowWinner();
+	}
 }
 
 

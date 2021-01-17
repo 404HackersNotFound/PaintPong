@@ -44,9 +44,6 @@ void TimerEntity::Update()
 	if (secondsRemaining > 0) {
 		m_timerTextRenderComponent->SetString(std::to_string(secondsRemaining));
 	}
-	else {
-		m_timerTextRenderComponent->SetString(std::to_string(0));
-	}
 }
 
 void TimerEntity::ShowWinner(sf::Color color) 

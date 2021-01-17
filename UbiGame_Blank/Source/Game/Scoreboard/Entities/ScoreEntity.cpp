@@ -37,5 +37,6 @@ void ScoreEntity::OnRemoveFromWorld()
 
 void ScoreEntity::UpdateScore(int score)
 {
+	ScoreEntity::score = score;
 	m_scoreTextRenderComponent->SetString(std::to_string(score));
 }

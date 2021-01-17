@@ -42,7 +42,7 @@ void GameBoard::Update()
 
 void GameBoard::CreatePaddle() {
 	float h = GameEngine::GameEngineMain::GetPixelHeight(100.f);
-	int player = 4;
+	int numPlayers = 4;
 
 	//LeftMan
 	left_paddle = new PaddleEntity();
@@ -56,7 +56,7 @@ void GameBoard::CreatePaddle() {
 	render_left->SetZLevel(2);
 
 	//RightMan
-	right_paddle = new PaddleEntity2(player);
+	right_paddle = new PaddleEntity2(numPlayers);
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(right_paddle);
 	right_paddle->flag = 3;
 	right_paddle->SetPos(sf::Vector2f(h - 50.f, 100.f));
@@ -66,7 +66,7 @@ void GameBoard::CreatePaddle() {
 	render_right->SetTexture(GameEngine::eTexture::RightPaddle);
 	render_right->SetZLevel(2);
 	
-	if (player >= 3)
+	if (numPlayers >= 3)
 	{
 		//TopMan
 		top_paddle = new PaddleEntity3();
@@ -80,7 +80,7 @@ void GameBoard::CreatePaddle() {
 		render_top->SetZLevel(2);
 	}
 
-	if (player == 4)
+	if (numPlayers == 4)
 	{
 		//BotMan
 		bot_paddle = new PaddleEntity4();
@@ -111,7 +111,7 @@ void GameBoard::CreateBall() {
 }
 
 void GameBoard::CreateScoreboard() {
-	scoreboard = new ScoreboardEntity(2);
+	scoreboard = new ScoreboardEntity(numPlayers);
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(scoreboard);
 
 	scoreboard->SetPos(sf::Vector2f(GameEngine::GameEngineMain::GetPixelWidth(50.f), GameEngine::GameEngineMain::GetPixelHeight(95.f)));

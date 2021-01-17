@@ -31,6 +31,9 @@ void GameBoard::Update()
 		if(ball->flag !=-1)
 		Border->UpdatePixel(ball->GetPos().x, ball->GetPos().y, ball->flag-2, scoreboard);
 	}
+	else {
+		scoreboard->ShowWinner();
+	}
 }
 
 
@@ -76,7 +79,7 @@ void GameBoard::CreateBall() {
 }
 
 void GameBoard::CreateScoreboard() {
-	scoreboard = new ScoreboardEntity();
+	scoreboard = new ScoreboardEntity(2);
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(scoreboard);
 
 	scoreboard->SetPos(sf::Vector2f(GameEngine::GameEngineMain::GetPixelWidth(50.f), GameEngine::GameEngineMain::GetPixelHeight(95.f)));

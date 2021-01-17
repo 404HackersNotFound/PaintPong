@@ -8,7 +8,7 @@ namespace Game
 	class TimerEntity : public GameEngine::Entity
 	{
 	public:
-		TimerEntity(int seconds);
+		TimerEntity(sf::Color color, int seconds);
 		~TimerEntity();
 
 		virtual void OnAddToWorld() override;
@@ -16,6 +16,7 @@ namespace Game
 		virtual void Update() override;
 
 		virtual int GetSecondsRemaining() { return secondsRemaining; };
+		virtual void ShowWinner(sf::Color color);
 
 	protected:
 		GameEngine::TextRenderComponent* m_timerTextRenderComponent;

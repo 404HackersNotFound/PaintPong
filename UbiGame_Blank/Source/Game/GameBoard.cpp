@@ -70,7 +70,7 @@ void GameBoard::CreateBall() {
 	ball = new BallEntity();
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(ball);
 
-	ball->SetPos(sf::Vector2f(100.f, 100.f));
+	ball->SetPos(sf::Vector2f(250.f, 250.f));
 	ball->SetSize(sf::Vector2f(20.f, 20.f));
 }
 

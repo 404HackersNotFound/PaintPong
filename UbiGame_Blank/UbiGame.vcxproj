@@ -230,7 +230,12 @@ XCOPY "$(SolutionDir)..\SFML-2.5.0\bin" "$(TargetDir)" /S /Y /I</Command>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\img\Black.png" />
+    <Image Include="Resources\img\blue_chopsticks.png" />
+    <Image Include="Resources\img\blue_maki.png" />
     <Image Include="Resources\img\leftcolourball.png" />
+    <Image Include="Resources\img\neutral_maki.png" />
+    <Image Include="Resources\img\pink_chopstick.png" />
+    <Image Include="Resources\img\pink_maki.png" />
     <Image Include="Resources\img\rightcolourball.png" />
     <Image Include="Resources\img\whiteball.png" />
   </ItemGroup>

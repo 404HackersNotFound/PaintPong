@@ -57,12 +57,14 @@ void BallCollideComponent::Update()
 				if (/*check to make sure its in front*/true) {
 					ballColor->SetTexture(GameEngine::eTexture::LeftBall);
 					ballColor->UpdateSpriteParams();
+					GetEntity()->flag = 2;
 				}
 			}
 			else if (colComponent->GetEntity()->flag == 3) {
 				if (/*Check to make sure its in front*/true) {
 					ballColor->SetTexture(GameEngine::eTexture::RightBall);
 					ballColor->UpdateSpriteParams();
+					GetEntity()->flag = 3;
 				}
 			}
 

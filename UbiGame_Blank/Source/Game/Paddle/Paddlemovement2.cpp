@@ -1,11 +1,13 @@
 #include "Paddlemovement2.h"
 #include "GameEngine/GameEngineMain.h"
+#include "Game/Paddle/PaddleEntity2.h"
 
 #include <SFML/Window/Keyboard.hpp>
 //Paddlemovement 2
 using namespace Game;
 
 Paddlemovement2::Paddlemovement2()
+
 {
 
 }
@@ -24,6 +26,8 @@ void Paddlemovement2::OnAddToWorld()
 void Paddlemovement2::Update()
 //Add keyboard movements
 {
+	int numbofplayer = GetEntity()->numbofplayer;
+	//printf("%d", numbofplayer);
 	int paddlesize = 50;
 	__super::Update();
 
@@ -38,7 +42,7 @@ void Paddlemovement2::Update()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
 			//top border + paddlesize middle + top border thickness
-		if ((GetEntity()->GetPos().y + wantedVel.y) > (0 + paddlesize / 2) +6)
+		if ((GetEntity()->GetPos().y + wantedVel.y) > (0 + paddlesize / 2) +66)
 		{
 			wantedVel.y -= playerVel * dt;
 		}
@@ -46,7 +50,7 @@ void Paddlemovement2::Update()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 	{
-		if ((GetEntity()->GetPos().y + wantedVel.y) < (GameEngine::GameEngineMain::GetPixelHeight(90.f) - paddlesize / 2))
+		if ((GetEntity()->GetPos().y + wantedVel.y) < (GameEngine::GameEngineMain::GetPixelHeight(90.f) - paddlesize / 2) + -66)
 		{
 			wantedVel.y += playerVel * dt;
 		}
@@ -54,4 +58,13 @@ void Paddlemovement2::Update()
 
 	GetEntity()->SetPos(GetEntity()->GetPos() + wantedVel);
 
+
 }
+/*Paddlemovement2* Paddlemovement2::AddComponent()
+{
+	Paddlemovement2* newComponent = new Paddlemovement2(numbofplayer);
+	newComponent->SetEntity(this);
+	m_components.push_back(newComponent);
+
+	return newComponent;
+}*/

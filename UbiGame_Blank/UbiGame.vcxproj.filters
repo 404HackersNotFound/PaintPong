@@ -31,6 +31,10 @@
     <ClCompile Include="Source\GameEngine\GameEngineMain.cpp" />
     <ClCompile Include="Source\GameEngine\Util\TextureManager.cpp" />
     <ClCompile Include="Source\GameEngine\EntitySystem\Components\SpriteRenderComponent.cpp" />
+    <ClCompile Include="Source\Game\Paddle\Paddlemovement3.cpp" />
+    <ClCompile Include="Source\Game\Paddle\Paddlemovement4.cpp" />
+    <ClCompile Include="Source\Game\Paddle\PaddleEntity3.cpp" />
+    <ClCompile Include="Source\Game\Paddle\PaddleEntity4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Game\Paddle\PaddleEntity2.h" />
@@ -62,6 +66,10 @@
     <ClInclude Include="Source\Game\Scoreboard\Entities\ScoreboardEntity.h" />
     <ClInclude Include="Source\Game\Scoreboard\Entities\ScoreEntity.h" />
     <ClInclude Include="Source\Game\Scoreboard\Entities\TimerEntity.h" />
+    <ClInclude Include="Source\Game\Paddle\Paddlemovement3.h" />
+    <ClInclude Include="Source\Game\Paddle\Paddlemovement4.h" />
+    <ClInclude Include="Source\Game\Paddle\PaddleEntity3.h" />
+    <ClInclude Include="Source\Game\Paddle\PaddleEntity4.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\img\Black.png" />

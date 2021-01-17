@@ -1,6 +1,6 @@
 #pragma once
 #include "GameEngine/EntitySystem/Entity.h"
-#include "Game/Paddle/Paddlemovement2.h"
+#include "Game/Paddle/Paddlemovement3.h"
 #include "GameEngine/EntitySystem/Components/SpriteRenderComponent.h"
 #include "GameEngine/EntitySystem/Components/CollidableComponent.h"
 #include "GameEngine/EntitySystem/Components/CollidablePhysicsComponent.h"
@@ -12,21 +12,19 @@ namespace Game
 {
 	//Used for storing and controlling all game related entities, as well as providing an entry point for the "game" side of application	
 
-	class PaddleEntity2 : public GameEngine::Entity
+	class PaddleEntity3 : public GameEngine::Entity
 	{
 	public:
-		PaddleEntity2(int numbofplayer);
-		~PaddleEntity2();
-		int getnumbofplayer() {
-			return numbofplayer;
-		}
+		PaddleEntity3();
+		~PaddleEntity3();
+
 
 	protected:
-		Paddlemovement2* paddleMovement2;
-		GameEngine::CollidableComponent* collidableComponet2;
+		Paddlemovement3* paddleMovement3;
+		GameEngine::CollidableComponent* collidableComponet3;
 		//GameEngine::CollidablePhysicsComponent* physicsComponet2;
-		int numbofplayer;
 
 
 	};
 }
+

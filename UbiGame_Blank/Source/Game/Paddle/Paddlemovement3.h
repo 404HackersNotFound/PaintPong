@@ -1,19 +1,19 @@
 #pragma once
 #include "GameEngine/EntitySystem/Component.h"
-//Paddlemovement 2
+//Paddlemovement 3
 namespace Game
 {
-	class Paddlemovement2 :public GameEngine::Component
+	class Paddlemovement3 :public GameEngine::Component
 	{
 	public:
-		Paddlemovement2();
-		~Paddlemovement2();
+		Paddlemovement3();
+		~Paddlemovement3();
 
 		virtual void Update() override;
 		virtual void OnAddToWorld() override;
-		//virtual Paddlemovement2* AddComponent();
 
 	private:
-		
+
 	};
 }
+

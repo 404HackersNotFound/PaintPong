@@ -22,6 +22,8 @@ void BallMovementComponent::OnAddToWorld()
 {
 	__super::OnAddToWorld();
 	srand(time(0));
+	speed = 150.f; //initally 100
+	xDirection = 90 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 110));
 	speed = 300.f;
 	xDirection = 70 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 230));
 

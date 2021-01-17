@@ -11,7 +11,7 @@ using namespace Game;
 
 
 
-PaddleEntity2::PaddleEntity2()
+PaddleEntity2::PaddleEntity2(int numbofplayer)
 {
 	paddleMovement2 = AddComponent<Paddlemovement2>();
 	collidableComponet2 = AddComponent<GameEngine::CollidableComponent>();
@@ -26,4 +26,14 @@ PaddleEntity2::PaddleEntity2()
 PaddleEntity2::~PaddleEntity2()
 {
 
+}
+
+template <class T>
+T* AddComponent()
+{
+	T* newComponent = new T(numbofplayer);
+	newComponent->SetEntity(this);
+	m_components.push_back(newComponent);
+
+	return newComponent;
 }

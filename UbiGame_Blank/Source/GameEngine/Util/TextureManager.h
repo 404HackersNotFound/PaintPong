@@ -34,7 +34,7 @@ namespace GameEngine
 		case eTexture::TopBall: return "yellow_maki.png";
 		case eTexture::BotBall: return "green_maki.png";
 		case eTexture::LeftPaddle: return "pink_chopstick.png";
-		case eTexture::RightPaddle: return "blue_chopstick.png";
+		case eTexture::RightPaddle: return "blue_chopsticks.png";
 		case eTexture::TopPaddle: return "yellow_chopstick.png";
 		case eTexture::BotPaddle: return "green_chopstick.png";
 		case eTexture::Background:    return "Black.png";

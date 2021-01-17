@@ -182,6 +182,10 @@ XCOPY "$(SolutionDir)..\SFML-2.5.0\bin" "$(TargetDir)" /S /Y /I</Command>
     <ClCompile Include="Source\Game\GameBoard.cpp" />
     <ClCompile Include="Source\GameEngine\EntitySystem\Components\RenderComponent.cpp" />
     <ClCompile Include="Source\GameEngine\EntitySystem\Component.cpp" />
+    <ClCompile Include="Source\Game\Paddle\Paddlemovement3.cpp" />
+    <ClCompile Include="Source\Game\Paddle\Paddlemovement4.cpp" />
+    <ClCompile Include="Source\Game\Paddle\PaddleEntity3.cpp" />
+    <ClCompile Include="Source\Game\Paddle\PaddleEntity4.cpp" />
     <ClCompile Include="Source\Game\Scoreboard\Entities\ScoreboardEntity.cpp" />
     <ClCompile Include="Source\Game\Scoreboard\Entities\ScoreEntity.cpp" />
     <ClCompile Include="Source\Game\Scoreboard\Entities\TimerEntity.cpp" />
@@ -195,6 +199,10 @@ XCOPY "$(SolutionDir)..\SFML-2.5.0\bin" "$(TargetDir)" /S /Y /I</Command>
     <ClCompile Include="Source\GameEngine\EntitySystem\Components\SpriteRenderComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Game\Paddle\PaddleEntity4.h" />
+    <ClInclude Include="Source\Game\Paddle\PaddleEntity3.h" />
+    <ClInclude Include="Source\Game\Paddle\Paddlemovement4.h" />
+    <ClInclude Include="Source\Game\Paddle\Paddlemovement3.h" />
     <ClInclude Include="Source\Game\Paddle\PaddleEntity2.h" />
     <ClInclude Include="Source\Game\Paddle\Paddlemovement2.h" />
     <ClInclude Include="Source\Game\Ball\BallComponents\BallCollideComponent.h" />

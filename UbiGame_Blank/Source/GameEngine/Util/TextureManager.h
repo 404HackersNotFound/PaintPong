@@ -21,6 +21,7 @@ namespace GameEngine
 			RightPaddle,
 			TopPaddle,
 			BotPaddle,
+			Grass,
 			Count,
 		};
 	}	
@@ -38,6 +39,7 @@ namespace GameEngine
 		case eTexture::TopPaddle: return "yellow_chopstick.png";
 		case eTexture::BotPaddle: return "green_chopstick.png";
 		case eTexture::Background:    return "Black.png";
+		case eTexture::Grass: return "shorter_grass.png";
 		
 		}
 		return "UnknownTexType";

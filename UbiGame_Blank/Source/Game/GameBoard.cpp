@@ -13,7 +13,7 @@
 using namespace Game;
 float s = 0;
 GameBoard::GameBoard()
-	: left_paddle(nullptr), right_paddle(nullptr), top_paddle(nullptr), bot_paddle(nullptr), ball(nullptr), scoreboard(nullptr), Border(nullptr)
+	: left_paddle(nullptr), right_paddle(nullptr), top_paddle(nullptr), bot_paddle(nullptr), ball(nullptr), scoreboard(nullptr), Border(nullptr), grass(nullptr)
 {
 	CreatePaddle();
 	CreateBall();
@@ -43,6 +43,16 @@ void GameBoard::Update()
 void GameBoard::CreatePaddle() {
 	float h = GameEngine::GameEngineMain::GetPixelHeight(100.f);
 	
+
+	grass = new GameEngine::Entity();
+	grass->SetPos(sf::Vector2f(250, 225));
+	grass->SetSize(sf::Vector2f(500, 450));
+	GameEngine::SpriteRenderComponent* render_grass = static_cast<GameEngine::SpriteRenderComponent*>(grass->AddComponent<GameEngine::SpriteRenderComponent>());
+	render_grass->SetFillColor(sf::Color::Transparent);
+	render_grass->SetTexture(GameEngine::eTexture::Grass);
+	GameEngine::GameEngineMain::GetInstance()->AddEntity(grass);
+	render_grass->SetZLevel(1);
+
 
 	//LeftMan
 	left_paddle = new PaddleEntity();

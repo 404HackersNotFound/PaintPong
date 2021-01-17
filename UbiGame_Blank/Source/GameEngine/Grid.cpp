@@ -6,7 +6,7 @@
 
 using namespace Game;
 Grid::Grid()
-	: top_border(nullptr), bottom_border(nullptr), left_border(nullptr), right_border(nullptr)
+	: top_border(nullptr), bottom_border(nullptr), left_border(nullptr), right_border(nullptr), grass(nullptr)
 {
 	CreateBorder();
 	int plynA[4] = { 0,0,0,0 };
@@ -29,6 +29,8 @@ void Grid::CreateBorder() {
 	
 	//m_backGround = bgEntity;
 
+	grass = new GameEngine::Entity();
+	
 	top_border = new GameEngine::Entity();
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(top_border);
 	bottom_border = new GameEngine::Entity();
@@ -37,9 +39,20 @@ void Grid::CreateBorder() {
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(left_border);
 	right_border = new GameEngine::Entity();
 	GameEngine::GameEngineMain::GetInstance()->AddEntity(right_border);
+
+
 	float h = GameEngine::GameEngineMain::GetPixelHeight(100.f);
 	float w = GameEngine::GameEngineMain::GetPixelWidth(100.f);
 	float border_w = 10;
+
+	/*grass->SetPos(sf::Vector2f(w/2, h/2-h/5));
+	grass->SetSize(sf::Vector2f(w,4*h/5));
+	GameEngine::SpriteRenderComponent* render_grass = static_cast<GameEngine::SpriteRenderComponent*>(grass->AddComponent<GameEngine::SpriteRenderComponent>());
+	render_grass->SetFillColor(sf::Color::Transparent);
+	render_grass->SetTexture(GameEngine::eTexture::Grass);
+	GameEngine::GameEngineMain::GetInstance()->AddEntity(grass);
+	render_grass->SetZLevel(1);*/
+
 	top_border->SetPos(sf::Vector2f(w / 2, 0));
 	top_border->SetSize(sf::Vector2f(w, border_w + 3));
 

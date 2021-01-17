@@ -20,6 +20,7 @@ namespace Game {
 		GameEngine::Entity* left_border;
 		GameEngine::Entity* right_border;
 		GameEngine::Entity* bgEntity;
+		GameEngine::Entity* grass;
 		int p1 = 0;
 		int p2 = 0;
 		int whatplayer(sf::Color check);

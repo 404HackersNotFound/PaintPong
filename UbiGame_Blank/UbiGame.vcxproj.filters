@@ -81,6 +81,11 @@
     <Image Include="Resources\img\pink_maki.png" />
     <Image Include="Resources\img\neutral_maki.png" />
     <Image Include="Resources\img\blue_maki.png" />
+    <Image Include="Resources\img\green_chopstick.png" />
+    <Image Include="Resources\img\green_maki.png" />
+    <Image Include="Resources\img\yellow_chopstick.png" />
+    <Image Include="Resources\img\yellow_maki.png" />
+    <Image Include="Resources\img\shorter_grass.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\fonts\arial.ttf" />

@@ -25,6 +25,8 @@ namespace Game
 	
 	private:
 		void CreatePaddle();
+		GameEngine::Entity* grass;
+
 		PaddleEntity* left_paddle;
 		PaddleEntity2* right_paddle;
 		PaddleEntity3* top_paddle;

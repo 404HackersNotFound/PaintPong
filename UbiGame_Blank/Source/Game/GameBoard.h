@@ -38,7 +38,7 @@ namespace Game
 		void CreateScoreboard();
 		ScoreboardEntity* scoreboard;
 
-		int numPlayers = 4;
+		int numPlayers = 2; //change values. also change in entity.h
 	};
 }
 

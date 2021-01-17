@@ -42,7 +42,7 @@ void GameBoard::Update()
 
 void GameBoard::CreatePaddle() {
 	float h = GameEngine::GameEngineMain::GetPixelHeight(100.f);
-	int numPlayers = 4;
+	
 
 	//LeftMan
 	left_paddle = new PaddleEntity();

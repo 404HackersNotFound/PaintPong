@@ -15,8 +15,12 @@ namespace GameEngine
 			Ball,
 			LeftBall,
 			RightBall,
+			TopBall,
+			BotBall,
 			LeftPaddle,
 			RightPaddle,
+			TopPaddle,
+			BotPaddle,
 			Count,
 		};
 	}	
@@ -27,8 +31,12 @@ namespace GameEngine
 		case eTexture::Ball: return "neutral_maki.png";
 		case eTexture::LeftBall: return "pink_maki.png";
 		case eTexture::RightBall: return "blue_maki.png";
+		case eTexture::TopBall: return "yellow_maki.png";
+		case eTexture::BotBall: return "green_maki.png";
 		case eTexture::LeftPaddle: return "pink_chopstick.png";
 		case eTexture::RightPaddle: return "blue_chopstick.png";
+		case eTexture::TopPaddle: return "yellow_chopstick.png";
+		case eTexture::BotPaddle: return "green_chopstick.png";
 		case eTexture::Background:    return "Black.png";
 		
 		}

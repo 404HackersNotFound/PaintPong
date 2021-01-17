@@ -54,18 +54,24 @@ void BallCollideComponent::Update()
 			SpriteRenderComponent* ballColor = GetEntity()->GetComponent<SpriteRenderComponent>();
 
 			if (colComponent->GetEntity()->flag == 2) {
-				if (/*check to make sure its in front*/true) {
-					ballColor->SetTexture(GameEngine::eTexture::LeftBall);
-					ballColor->UpdateSpriteParams();
-					GetEntity()->flag = 2;
-				}
+				ballColor->SetTexture(GameEngine::eTexture::LeftBall);
+				ballColor->UpdateSpriteParams();
+				GetEntity()->flag = 2;
 			}
 			else if (colComponent->GetEntity()->flag == 3) {
-				if (/*Check to make sure its in front*/true) {
-					ballColor->SetTexture(GameEngine::eTexture::RightBall);
-					ballColor->UpdateSpriteParams();
-					GetEntity()->flag = 3;
-				}
+				ballColor->SetTexture(GameEngine::eTexture::RightBall);
+				ballColor->UpdateSpriteParams();
+				GetEntity()->flag = 3;
+			}
+			else if (colComponent->GetEntity()->flag == 4) {
+				ballColor->SetTexture(GameEngine::eTexture::TopBall);
+				ballColor->UpdateSpriteParams();
+				GetEntity()->flag = 4;
+			}
+			else if (colComponent->GetEntity()->flag == 5) {
+				ballColor->SetTexture(GameEngine::eTexture::BotBall);
+				ballColor->UpdateSpriteParams();
+				GetEntity()->flag = 5;
 			}
 
 			sf::Vector2f pos = GetEntity()->GetPos();

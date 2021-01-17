@@ -22,6 +22,9 @@ namespace Game {
 		GameEngine::Entity* bgEntity;
 		int p1 = 0;
 		int p2 = 0;
+		int whatplayer(sf::Color check);
+	private:
+		int plynA[4];
 	};
 
 

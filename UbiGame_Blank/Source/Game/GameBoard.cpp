@@ -28,7 +28,8 @@ GameBoard::~GameBoard()
 void GameBoard::Update()
 {	
 	if (scoreboard->GetSecondsRemaining() > 0) {
-		Border->UpdatePixel(ball->GetPos().x, ball->GetPos().y, 0, scoreboard);
+		if(ball->flag !=-1)
+		Border->UpdatePixel(ball->GetPos().x, ball->GetPos().y, ball->flag-2, scoreboard);
 	}
 }
 

@@ -37,6 +37,8 @@ namespace Game
 
 		void CreateScoreboard();
 		ScoreboardEntity* scoreboard;
+
+		int numPlayers = 4;
 	};
 }
 
